@@ -1,0 +1,43 @@
+{
+  "name": "react-native-infinite-virtualized-list",
+  "version": "0.1.2",
+  "homepage": "https://github.com/iwater/react-native-infinite-virtualized-list",
+  "description": "A new InfiniteList that compose react-virtualized/InfiniteLoader with the react-native/VirtualizedList component, and a drop replacement component of react-native-gifted-listview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iwater/react-native-infinite-virtualized-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iwater/react-native-infinite-virtualized-list/issues"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-native",
+    "react-component",
+    "virtual",
+    "list",
+    "scrolling",
+    "infinite",
+    "virtualized",
+    "virtualizedlist",
+    "listview",
+    "infinite-scrolling",
+    "ios",
+    "android"
+  ],
+  "peerDependencies": {
+    "react": ">=15.4.2",
+    "react-native": ">=0.43.0"
+  },
+  "dependencies": {
+    "core-decorators": ">=0.15.0",
+    "react-virtualized": ">=9.2.2"
+  },
+  "author": "iwater <iwater@gmail.com>",
+  "license": "MIT"
+}
