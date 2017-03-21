@@ -40,6 +40,19 @@ export default class GiftedVirtualizedList extends React.Component {
   }
 
   @autobind
+  refresh() {
+    this.setState({
+      list: [],
+      page: 1,
+    }, this.loadNextPage )
+  }
+
+  @autobind
+  _refresh() {
+    this.refresh()
+  }
+
+  @autobind
   renderItem({ item }) {
     return this.props.rowView(item)
   }
