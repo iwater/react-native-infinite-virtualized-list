@@ -5,6 +5,10 @@ A new InfiniteList for react-native 0.43+ that compose react-virtualized/Infinit
 
 
 ### Changelog
+#### 0.1.5
+- Pull-to-refresh
+#### 0.1.4
+- react-native 0.43.0+
 #### 0.1.0
 - the first version
 
@@ -128,7 +132,7 @@ var styles = {
 
 
 ### Features
-- [ ] Pull-to-refresh
+- [x] Pull-to-refresh
 - [x] Infinite scrolling
 - [x] Loader for first display
 - [x] Default view when no content to display

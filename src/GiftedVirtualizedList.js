@@ -17,6 +17,7 @@ export default class GiftedVirtualizedList extends React.Component {
   state = {
     list: [],
     page: 1,
+    refreshing: false,
   }
 
   componentDidMount() {
@@ -35,6 +36,7 @@ export default class GiftedVirtualizedList extends React.Component {
         hasNextPage: !allLoaded,
         list: list.concat(items),
         page: page + 1,
+        refreshing: false,
       }))
     })
   }
@@ -44,6 +46,7 @@ export default class GiftedVirtualizedList extends React.Component {
     this.setState({
       list: [],
       page: 1,
+      refreshing: true,
     }, this.loadNextPage )
   }
 
@@ -58,8 +61,8 @@ export default class GiftedVirtualizedList extends React.Component {
   }
 
   render() {
-    const { list, hasNextPage, isNextPageLoading } = this.state
-    const { emptyView, paginationWaitingView, ...otherProps } = this.props
+    const { list, hasNextPage, isNextPageLoading, refreshing } = this.state
+    const { emptyView, paginationWaitingView, headerView, refreshable, ...otherProps } = this.props
 
     if (list.length === 0) return emptyView()
     return (
@@ -72,6 +75,9 @@ export default class GiftedVirtualizedList extends React.Component {
         paginationWaitingView={paginationWaitingView}
         getItem={(data, index) => list[index]}
         getItemCount={() => list.length}
+        ListHeaderComponent={headerView}
+        onRefresh={refreshable ? this.refresh : null}
+        refreshing={refreshing}
         {...otherProps}
       />
     )
