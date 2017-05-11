@@ -56,6 +56,13 @@ export default class GiftedVirtualizedList extends React.Component {
   }
 
   @autobind
+  removeItem(row) {
+    this.setState(({list}, {removeRow = l => l}) => ({
+      list: removeItem(list, row)
+    }))
+  }
+
+  @autobind
   renderItem({ item }) {
     return this.props.rowView(item)
   }
