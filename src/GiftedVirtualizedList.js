@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import { autobind } from 'core-decorators'
 import InfiniteVirtualizedList from './InfiniteVirtualizedList'
 
 export default class GiftedVirtualizedList extends React.Component {
@@ -24,8 +23,7 @@ export default class GiftedVirtualizedList extends React.Component {
     this.loadNextPage()
   }
 
-  @autobind
-  loadNextPage() {
+  loadNextPage = () => {
     const { onFetch } = this.props
     this.setState({
       isNextPageLoading: true,
@@ -41,8 +39,7 @@ export default class GiftedVirtualizedList extends React.Component {
     })
   }
 
-  @autobind
-  refresh() {
+  refresh = () => {
     this.setState({
       list: [],
       page: 1,
@@ -50,20 +47,17 @@ export default class GiftedVirtualizedList extends React.Component {
     }, this.loadNextPage )
   }
 
-  @autobind
-  _refresh() {
+  _refresh = () => {
     this.refresh()
   }
 
-  @autobind
-  removeItem(row) {
+  removeItem = (row) => {
     this.setState(({list}, {removeRow = l => l}) => ({
       list: removeItem(list, row)
     }))
   }
 
-  @autobind
-  renderItem({ item }) {
+  renderItem = ({ item }) => {
     return this.props.rowView(item)
   }
 

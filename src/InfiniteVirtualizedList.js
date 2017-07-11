@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { VirtualizedList } from 'react-native'
-import { InfiniteLoader } from 'react-virtualized/dist/es/InfiniteLoader'
+import { InfiniteLoader } from 'react-virtualized/dist/commonjs/InfiniteLoader'
 
 const noop = () => {}
 
