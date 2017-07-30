@@ -1,6 +1,6 @@
 {
   "name": "react-native-infinite-virtualized-list",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "homepage": "https://github.com/iwater/react-native-infinite-virtualized-list",
   "description": "A new InfiniteList that compose react-virtualized/InfiniteLoader with the react-native/VirtualizedList component, and a drop replacement component of react-native-gifted-listview",
   "main": "index.js",

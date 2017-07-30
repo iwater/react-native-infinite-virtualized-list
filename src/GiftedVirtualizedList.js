@@ -32,7 +32,7 @@ export default class GiftedVirtualizedList extends React.Component {
       this.setState(({ list, page }) => ({
         isNextPageLoading: false,
         hasNextPage: !allLoaded,
-        list: list.concat(items),
+        list: list.concat(Array.isArray(items) ? items : []),
         page: page + 1,
         refreshing: false,
       }))
