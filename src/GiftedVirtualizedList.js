@@ -11,6 +11,7 @@ export default class GiftedVirtualizedList extends React.Component {
     refreshable: PropTypes.bool.isRequired,
     enableEmptySections: PropTypes.bool.isRequired,
     pagination: PropTypes.bool.isRequired,
+    removeRow: PropTypes.func,
   }
 
   state = {
@@ -53,7 +54,7 @@ export default class GiftedVirtualizedList extends React.Component {
 
   removeItem = (row) => {
     this.setState(({list}, {removeRow = l => l}) => ({
-      list: removeItem(list, row)
+      list: removeRow(list, row)
     }))
   }
 
