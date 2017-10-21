@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import InfiniteVirtualizedList from './InfiniteVirtualizedList'
 
 export default class GiftedVirtualizedList extends React.Component {
