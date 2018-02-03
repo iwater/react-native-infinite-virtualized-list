@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import InfiniteVirtualizedList from './InfiniteVirtualizedList'
 
-export default class GiftedVirtualizedList extends React.Component {
+export default class GiftedVirtualizedList extends React.PureComponent {
   static propTypes = {
     onFetch: PropTypes.func.isRequired,
     rowView: PropTypes.func.isRequired,
