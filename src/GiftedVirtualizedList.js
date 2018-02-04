@@ -7,7 +7,7 @@ export default class GiftedVirtualizedList extends React.PureComponent {
     onFetch: PropTypes.func.isRequired,
     rowView: PropTypes.func.isRequired,
     paginationWaitingView: PropTypes.func.isRequired,
-    emptyView: PropTypes.func.isRequired,
+    emptyView: PropTypes.func,
     paginationAllLoadedView: PropTypes.func.isRequired,
     refreshable: PropTypes.bool.isRequired,
     enableEmptySections: PropTypes.bool.isRequired,
@@ -67,7 +67,7 @@ export default class GiftedVirtualizedList extends React.PureComponent {
     const { list, hasNextPage, isNextPageLoading, refreshing } = this.state
     const { emptyView, paginationWaitingView, headerView, refreshable, ...otherProps } = this.props
 
-    if (list.length === 0) return emptyView()
+    if (emptyView && list.length === 0) return emptyView()
     return (
       <InfiniteVirtualizedList
         data={list}
