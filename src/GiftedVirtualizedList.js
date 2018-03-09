@@ -59,8 +59,8 @@ export default class GiftedVirtualizedList extends React.PureComponent {
     }))
   }
 
-  renderItem = ({ item }) => {
-    return this.props.rowView(item)
+  renderItem = ({ item, index }) => {
+    return this.props.rowView(item, index)
   }
 
   render() {
